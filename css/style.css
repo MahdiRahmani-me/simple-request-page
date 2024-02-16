@@ -1,0 +1,20 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --color-white: #fff
+  
+}
+
+html {
+font-size: 62.5%;
+}
+
+body{
+  font-family: "Vazirmatn";
+}
