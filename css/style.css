@@ -6,15 +6,167 @@
   box-sizing: border-box;
 }
 
-:root{
-  --color-white: #fff
-  
+:root {
+  --color-white: #fff;
+  --color-black: #1e1e1e;
+  --color-secondary: #696969;
+  --color-circle: #afcedd;
+  --color-button: #234894;
+  --color-click: #219f95;
 }
 
 html {
-font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-body{
+body {
   font-family: "Vazirmatn";
+}
+
+/* CONTAINER */
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 40px;
+}
+
+.first-profile {
+  width: 400px;
+  height: 200px;
+  border-radius: 16px;
+  padding: 17px 17px 25px 12px;
+}
+
+.header {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 55px;
+  white-space: nowrap;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* PROFILE 1 */
+
+.profile-1 {
+  /* padding: 0 3rem; */
+  margin-bottom: 16px;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-header div:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-header span {
+  border-radius: 6px;
+  padding: 8px;
+  background: var(--color-circle);
+  /* border: 40px; */
+  width: 40px;
+  height: 40px;
+  color: var(--color-button);
+  text-align: center;
+  font-size: 18px;
+}
+
+.profile-header__upload {
+  font-size: 1.6rem;
+  color: var(--color-button);
+  font-weight: 600;
+}
+
+.profile-header__history {
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  font-weight: 400;
+}
+
+.title-header {
+  margin-bottom: 12px;
+}
+
+.title-header__request {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--color-black);
+}
+
+.title-header__number {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-secondary);
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.profile-image img {
+  height: 40px;
+  width: 40px;
+}
+
+.profile-image__name {
+  font-size: 18px;
+  color: var(--color-black);
+  font-weight: bold;
+}
+
+.button-profile {
+  /* position: absolute; */
+  transform: translate(4px, -65px);
+  display: grid;
+  justify-content: flex-end;
+}
+
+.button {
+  width: 150px;
+  height: 64px;
+  background-color: var(--color-click);
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button p {
+  color: var(--color-white);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Vazirmatn";
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
